@@ -3,6 +3,6 @@
 
 原则上，最终会用egg + mongodb
 
-但是打算从express，nginx开始入门
+但是打算从express，koa，nginx开始入门
 
 ps:现在我对这些概念还不是很懂，写的可能都是错的:)
