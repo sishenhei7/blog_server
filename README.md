@@ -1,5 +1,5 @@
 # blog_server
-腾讯云服务器买了好久了，打算用nodejs配置一个服务器，然后把react blog放在上面
+腾讯云服务器买了好久了，打算用nodejs配置一个(带后台管理系统的？)服务器，然后把react blog放在上面
 
 原则上，最终会用egg + mongodb
 
