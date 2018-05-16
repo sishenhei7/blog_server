@@ -1,0 +1,13 @@
+{
+  "short_name": "馒头加梨子",
+  "name": "馒头加梨子",
+  "icons": [
+    {
+      "src": "favicon.png",
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

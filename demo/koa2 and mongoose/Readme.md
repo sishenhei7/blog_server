@@ -1,5 +1,7 @@
 ## install
 
+需要电脑上事先安装好mongodb数据库，并且开启mongodb服务！然后打开命令行执行下面语句：
+
 ```
 npm i
 ```
