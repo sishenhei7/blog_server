@@ -9,6 +9,7 @@ PS:用360浏览器会有鼠标与视图不对位的bug,用chrome和手机浏览�
 
 1. ~~学习koa搭建jsonp和restful接口~~
 2. ~~学习koa中mongoose的增删改查~~
-3. 去掉端口3000.
-4. 搞个后台.打算用egg + mongoose
-5. 换个https协议
+3. ~~学习前后端路由相结合~~
+4. 去掉端口3000.
+5. 搞个后台.打算用egg + mongoose
+6. 换个https协议
