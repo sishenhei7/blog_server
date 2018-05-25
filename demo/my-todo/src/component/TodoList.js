@@ -2,17 +2,20 @@ import React from 'react'
 
 const TodoList = ({ list, toggleState }) => {
 
+  const setLi = ( text, completed, id ) => (
+    <li
+      onClick={() => toggleState(id)}
+      style={{textDecoration: completed ? 'line-through' : 'none'}}
+      key={ id }
+    >{ text }</li>
+  )
+
   switch(list.showContent) {
     case 'ACTIVE':
       return(
         <ul>
           { list.content.map(({ text, completed, id }) => (
-            !completed &&
-              <li
-                onClick={() => toggleState(id)}
-                style={{textDecoration: completed ? 'line-through' : 'none'}}
-                key={ id }
-              >{ text }</li>
+            !completed && setLi(text, completed, id)
           )) }
         </ul>
       )
@@ -20,12 +23,7 @@ const TodoList = ({ list, toggleState }) => {
       return(
         <ul>
           { list.content.map(({ text, completed, id }) => (
-            completed &&
-              <li
-                onClick={() => toggleState(id)}
-                style={{textDecoration: completed ? 'line-through' : 'none'}}
-                key={ id }
-              >{ text }</li>
+            completed && setLi(text, completed, id)
           )) }
         </ul>
       )
@@ -33,11 +31,7 @@ const TodoList = ({ list, toggleState }) => {
       return(
         <ul>
           { list.content.map(({ text, completed, id }) => (
-            <li
-              onClick={() => toggleState(id)}
-              style={{textDecoration: completed ? 'line-through' : 'none'}}
-              key={ id }
-            >{ text }</li>
+            setLi(text, completed, id)
           )) }
         </ul>
       )
