@@ -1,6 +1,6 @@
 ## 概述
 
-这是仿照[redux官网的todo-demo](https://github.com/reduxjs/redux/tree/master/examples/todos，自己用react不用redux编写的todo。有4个特点：
+这是仿照[redux官网的todo-demo](https://github.com/reduxjs/redux/tree/master/examples/todos)，自己用react不用redux编写的todo。有4个特点：
 1. 精简的es6语法。
 2. 使用redux管理数据。
 3. 具有容器组件和展示组件。
