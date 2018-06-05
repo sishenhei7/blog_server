@@ -6,11 +6,11 @@ let routerBlog = new Router();
 routerBlog.
   get('/', BlogController.getAll).
   post('/', BlogController.createOne).
-  get('/:id/addhits', BlogController.addHits).
+  get('/tags', BlogController.getTags).
   get('/:id', BlogController.getById).
   del('/:id', BlogController.delById).
+  get('/:id/addhits', BlogController.addHits).
   put('/:id/edit', BlogController.updateById).
-  get('/tags', BlogController.getTags).
   put('/:id/sticky', BlogController.setSticky).
   put('/:id/unsticky', BlogController.cancelSticky);
 

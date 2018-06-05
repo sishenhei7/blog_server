@@ -1,6 +1,6 @@
 const Blog = require('./../models/blog');
 const BlogController = {};
-let blogId = 1;
+let blogId = 2;
 
 //取所有博客
 BlogController.getAll = async ctx => {
@@ -31,7 +31,12 @@ BlogController.createOne = async ctx => {
 BlogController.addHits = async ctx => {
   const id = ctx.params.id;
   const blog = await Blog.find({ 'id': id});
-  blog.hits++;
+
+  await Blog.update({
+    'id': blog[0].id,
+  },{ $set: {
+    'hits': blog[0].hits + 1
+  }});
   ctx.type = 'json';
   ctx.body = {
     success: 1,
@@ -60,9 +65,10 @@ BlogController.delById = async ctx => {
 
 //按id修改博客
 BlogController.updateById = async ctx => {
+  const id = ctx.params.id;
   const blog = ctx.request.body;
   await Blog.update({
-    'id': blog.id,
+    'id': id,
   },{ $set: {
     'title': blog.title,
     'catagory': blog.catagory || 'frontEnd',

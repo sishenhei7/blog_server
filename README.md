@@ -23,7 +23,7 @@ PS:用360浏览器会有鼠标与视图不对位的bug,用chrome和手机浏览�
 
 - [x] 画出基本的架构图
 - [x] 搭建好前后端框架和文件架构
-- [ ] koa写入blog api
+- [x] koa写入blog api
 - [ ] koa写入user api
 - [ ] static写入后台管理系统
 - [ ] static写入博客系统
