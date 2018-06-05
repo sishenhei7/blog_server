@@ -19,7 +19,7 @@ const BlogSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  tag: {
+  tags: {
     type: Array,
     required: true
   },
