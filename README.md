@@ -9,6 +9,8 @@ PS:用360浏览器会有鼠标与视图不对位的bug,用chrome和手机浏览�
 
 ### 知识储备
 
+具体见[demo文件夹](./demo/)。
+
 - [x] 学习koa搭建jsonp和restful接口
 - [x] 学习koa中mongoose的增删改查
 - [x] 学习前后端路由相结合
@@ -24,7 +26,7 @@ PS:用360浏览器会有鼠标与视图不对位的bug,用chrome和手机浏览�
 - [x] 画出基本的架构图
 - [x] 搭建好前后端框架和文件架构
 - [x] koa写入blog api
-- [ ] koa写入user api
+- [x] koa写入user api
 - [ ] static写入后台管理系统
 - [ ] static写入博客系统
 - [ ] 开发二期
