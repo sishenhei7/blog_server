@@ -28,6 +28,17 @@ const UserSchema = mongoose.Schema({
 
 const userModel = mongoose.model('UserYZ', UserSchema);
 
+//添加管理员
+userModel.findOne({ 'id': 1}).exec(function(err, user) {
+  if(!user)
+    userModel.create({
+      'id': 1,
+      'name': Util.name,
+      'password': Util.password,
+      'authority': 1
+    });
+})
+
 module.exports = userModel;
 
 

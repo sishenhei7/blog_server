@@ -6,7 +6,7 @@ let routerUser = new Router();
 routerUser.
   post('/', UserController.createOne).
   post('/users', UserController.getAll).
-  post('/admin', UserController.createAdmin).
+  // post('/admin', UserController.createAdmin).
   post('/login', UserController.isUser).
   get('/names', UserController.getNames).
   post('/password/edit', UserController.alterPassword).

@@ -2,7 +2,7 @@ const User = require('./../models/user');
 const Util = require('./../../config/util');
 
 const UserController = {};
-let userId = 1;
+let userId = 2;
 
 //建立一个用户
 UserController.createOne = async ctx => {
@@ -33,7 +33,7 @@ UserController.createAdmin = async ctx => {
   } else {
     await User.create({
       'id': userId++,
-      'name': aname,
+      'name': name,
       'password': password,
       'authority': 1
     });
