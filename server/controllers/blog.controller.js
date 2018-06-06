@@ -30,12 +30,12 @@ BlogController.createOne = async ctx => {
 //增加点击数
 BlogController.addHits = async ctx => {
   const id = ctx.params.id;
-  const blog = await Blog.find({ 'id': id});
+  const blog = await Blog.findOne({ 'id': id});
 
   await Blog.update({
-    'id': blog[0].id,
+    'id': blog.id,
   },{ $set: {
-    'hits': blog[0].hits + 1
+    'hits': blog.hits + 1
   }});
   ctx.type = 'json';
   ctx.body = {
@@ -47,7 +47,7 @@ BlogController.addHits = async ctx => {
 //按id查找博客
 BlogController.getById = async ctx => {
   const id = ctx.params.id;
-  const blog = await Blog.find({ 'id': id});
+  const blog = await Blog.findOne({ 'id': id});
   ctx.type = 'json';
   ctx.body = blog;
 }
